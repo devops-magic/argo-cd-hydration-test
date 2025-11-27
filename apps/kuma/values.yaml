@@ -1,0 +1,7 @@
+controlPlane:
+  autoscaling:
+    enabled: true 
+  ingress:
+    # -- Install K8s Ingress resource that exposes GUI and API
+    enabled: true
+    hostname: status.devops-magic.eu
