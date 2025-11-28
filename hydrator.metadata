@@ -1,8 +1,7 @@
 {
   "repoURL": "https://github.com/devops-magic/argo-cd-hydration-test",
-  "drySha": "aeb3de00e7bb3a324c9bab5a724a0c45a8e18442",
-  "author": "Argo CD <argo-cd@example.com>",
-  "date": "2025-11-28T02:58:49Z",
-  "subject": "3139280: fix(apps): podinfo",
-  "body": "Co-authored-by: Elias Rami <elias.rami@outlook.at>\n"
+  "drySha": "3139280bb623e5f08ce3d812c82423ef8c194d0c",
+  "author": "Elias Rami <elias.rami@outlook.at>",
+  "date": "2025-11-27T23:23:05Z",
+  "subject": "fix(apps): podinfo"
 }
