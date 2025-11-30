@@ -3,8 +3,7 @@
 To hydrate the manifests in this repository, run the following commands:
 
 ```shell
-git clone https://github.com/devops-magic/argo-cd-hydration-test
+git clone https://github.com/devops-magic/argo-cd-hydration-test.git
 # cd into the cloned directory
-git checkout 3139280bb623e5f08ce3d812c82423ef8c194d0c
-helm template . --name-template podinfo --include-crds
+git checkout 1cc8a9f784db5353f9ed3b8a387a2a85d7c6d752
 ```
