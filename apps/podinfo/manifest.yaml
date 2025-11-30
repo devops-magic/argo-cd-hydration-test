@@ -128,7 +128,7 @@ metadata:
     app.kubernetes.io/name: podinfo
     app.kubernetes.io/version: 6.9.3
     helm.sh/chart: podinfo-6.9.3
-  name: podinfo-grpc-test-8p0po
+  name: podinfo-grpc-test-h31o7
   namespace: argocd-e2e
 spec:
   containers:
@@ -154,7 +154,7 @@ metadata:
     app.kubernetes.io/name: podinfo
     app.kubernetes.io/version: 6.9.3
     helm.sh/chart: podinfo-6.9.3
-  name: podinfo-jwt-test-of5eh
+  name: podinfo-jwt-test-ihdwn
   namespace: argocd-e2e
 spec:
   containers:
@@ -185,7 +185,7 @@ metadata:
     app.kubernetes.io/name: podinfo
     app.kubernetes.io/version: 6.9.3
     helm.sh/chart: podinfo-6.9.3
-  name: podinfo-service-test-qolrh
+  name: podinfo-service-test-any7h
   namespace: argocd-e2e
 spec:
   containers:
