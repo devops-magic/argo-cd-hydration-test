@@ -1,7 +1,7 @@
 {
   "repoURL": "https://github.com/devops-magic/argo-cd-hydration-test",
-  "drySha": "427c0a70c8df4375ec25eb97b244fb42c08c22d4",
+  "drySha": "15b3bb3acac9b8b5716227558e6036409f909c98",
   "commands": [
-    "helm template . --name-template my-app --include-crds"
+    "helm template . --name-template my-app --namespace default --include-crds"
   ]
 }

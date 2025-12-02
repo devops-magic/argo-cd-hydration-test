@@ -7,7 +7,7 @@ metadata:
     app.kubernetes.io/version: 6.9.3
     helm.sh/chart: podinfo-6.9.3
   name: my-app-podinfo
-  namespace: argocd
+  namespace: default
 spec:
   ports:
     - name: http
@@ -31,7 +31,7 @@ metadata:
     app.kubernetes.io/version: 6.9.3
     helm.sh/chart: podinfo-6.9.3
   name: my-app-podinfo
-  namespace: argocd
+  namespace: default
 spec:
   replicas: 1
   selector:
@@ -128,12 +128,12 @@ metadata:
     app.kubernetes.io/name: my-app-podinfo
     app.kubernetes.io/version: 6.9.3
     helm.sh/chart: podinfo-6.9.3
-  name: my-app-podinfo-grpc-test-uek9v
-  namespace: argocd
+  name: my-app-podinfo-grpc-test-aeufz
+  namespace: default
 spec:
   containers:
     - args:
-        - -addr=my-app-podinfo.argocd:9999
+        - -addr=my-app-podinfo.default:9999
       command:
         - grpc_health_probe
       image: stefanprodan/grpc_health_probe:v0.3.0
@@ -154,8 +154,8 @@ metadata:
     app.kubernetes.io/name: my-app-podinfo
     app.kubernetes.io/version: 6.9.3
     helm.sh/chart: podinfo-6.9.3
-  name: my-app-podinfo-jwt-test-mbp7r
-  namespace: argocd
+  name: my-app-podinfo-jwt-test-5qlp3
+  namespace: default
 spec:
   containers:
     - command:
@@ -166,7 +166,7 @@ spec:
           curl -sH "Authorization: Bearer ${TOKEN}" ${PODINFO_SVC}/token/validate | grep test
       env:
         - name: PODINFO_SVC
-          value: my-app-podinfo.argocd:9898
+          value: my-app-podinfo.default:9898
       image: giantswarm/tiny-tools
       name: tools
   restartPolicy: Never
@@ -185,8 +185,8 @@ metadata:
     app.kubernetes.io/name: my-app-podinfo
     app.kubernetes.io/version: 6.9.3
     helm.sh/chart: podinfo-6.9.3
-  name: my-app-podinfo-service-test-90ynw
-  namespace: argocd
+  name: my-app-podinfo-service-test-kebwr
+  namespace: default
 spec:
   containers:
     - command:
@@ -196,7 +196,7 @@ spec:
           curl -s ${PODINFO_SVC}/api/info | grep version
       env:
         - name: PODINFO_SVC
-          value: my-app-podinfo.argocd:9898
+          value: my-app-podinfo.default:9898
       image: curlimages/curl:7.69.0
       name: curl
   restartPolicy: Never
