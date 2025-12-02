@@ -1,0 +1,13 @@
+# Default values for rancher-ui.
+# This is a YAML-formatted file.
+# Declare variables to be passed into your templates.
+rancher:
+  # # Override names to ensure RBAC resources are named correctly
+  # # The Rancher chart expects the service account to be named 'rancher'
+  # fullnameOverride: rancher
+  
+  # # Override namespace for RBAC subjects - required when using ArgoCD sourceHydrator
+  # # because .Release.Namespace picks up 'argocd' instead of the destination namespace
+  # namespaceOverride: cattle-system
+  
+  hostname: rancher.example.com

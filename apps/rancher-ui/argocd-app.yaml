@@ -1,0 +1,26 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: rancher-ui
+  namespace: argocd
+spec:
+  destination:
+    namespace: cattle-system
+    server: https://kubernetes.default.svc
+  project: default
+  sourceHydrator:
+    drySource:
+      path: apps/rancher-ui
+      repoURL: https://github.com/devops-magic/argo-cd-hydration-test.git
+      targetRevision: main
+    syncSource:
+      path: apps/rancher-ui
+      targetBranch: bugreport/source-hydrator-not-respecting-namespace
+  syncPolicy:
+    automated:
+      enabled: true
+      prune: true
+      selfHeal: true
+  syncOptions:
+    createNamespace: true
+# add create namespace via argocd application
